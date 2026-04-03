@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4E342E;
+  --color-secondary: #211A1E;
+  --color-bg-main: #F8F9FA;
+  --color-sage: #4E342E;
+  --color-sage-dark: #211A1E;
+  --color-sand: #D7CCC8;
+  --color-sand-light: #F8F9FA;
+  --color-earth: #211A1E;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-main text-secondary antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+.glass {
+  @apply bg-white/40 backdrop-blur-md border border-black/5 shadow-sm;
+}
+
+.glass-dark {
+  @apply bg-secondary/10 backdrop-blur-md border border-white/10 shadow-md;
+}
