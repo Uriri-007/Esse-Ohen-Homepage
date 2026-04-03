@@ -140,7 +140,7 @@ const Hero = () => {
 
 const About = () => {
   const [copied, setCopied] = useState(false);
-  const summary = "A dynamic community professional with a proven track record at Rezerve Money. She excels in content moderation, community engagement, and leveraging strong writing skills to foster diversity and user interaction. She is known for her patience, ethical practices, and ability to drive initiatives that resonate with diverse audiences.";
+  const summary = "A dynamic community professional with a proven track record at Rezerve Money, excelling in content moderation and community engagement. Leveraged strong writing skills to enhance user interaction and foster diversity, resulting in increased community involvement. Known for patience and a commitment to ethical practices, driving successful initiatives that resonate with diverse audiences.";
 
   const handleExplainToChatGPT = () => {
     navigator.clipboard.writeText(summary);
@@ -148,7 +148,7 @@ const About = () => {
     setTimeout(() => setCopied(false), 3000);
     
     // Open ChatGPT with the prompt
-    const prompt = encodeURIComponent(`Here is a professional summary of Esse Ohen: "${summary}". Please provide more insights or help me draft a personalized outreach message for her.`);
+    const prompt = encodeURIComponent(`Here is a professional summary of Esse Ohen: "${summary}". Please provide more insights and help me draft a personalized outreach message for her.`);
     window.open(`https://chatgpt.com/?q=${prompt}`, '_blank');
   };
 
@@ -165,7 +165,7 @@ const About = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden glass p-4">
                 <img 
-                  src="https://picsum.photos/seed/esse/800/800" 
+                  src="esse.jpg" 
                   alt="Esse Ohen" 
                   className="w-full h-full object-cover rounded-xl"
                   referrerPolicy="no-referrer"
@@ -473,7 +473,7 @@ const CTA = () => {
               <a href="#" className="p-4 glass rounded-full hover:bg-primary hover:text-white transition-all">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="p-4 glass rounded-full hover:bg-primary hover:text-white transition-all">
+              <a href="https://x.com/Esseohen" className="p-4 glass rounded-full hover:bg-primary hover:text-white transition-all">
                 <XIcon className="w-6 h-6" />
               </a>
             </div>
