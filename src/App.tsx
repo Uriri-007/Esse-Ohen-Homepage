@@ -294,7 +294,7 @@ const Experience = () => {
                       <img 
                         src={exp.image} 
                         alt={exp.company}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover grayscale"
                       />
                     </div>
 
