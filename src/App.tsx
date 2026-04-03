@@ -225,6 +225,8 @@ const Experience = () => {
       role: "Community Moderator",
       company: "Rezerve Money",
       period: "June 2025 – Present",
+      // Professional community/collaboration placeholder
+      image: "rzr.jpg",
       points: [
         "Guided new members through onboarding and facilitated open communication",
         "Fostered diversity by engaging underrepresented voices",
@@ -236,6 +238,8 @@ const Experience = () => {
       role: "Community Manager",
       company: "Own Protocol",
       period: "June 2025 – Present",
+      // Digital/Social media interaction placeholder
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
       points: [
         "Managed social media channels for brand visibility and audience interaction",
         "Optimized marketing efforts for community expansion",
@@ -247,6 +251,8 @@ const Experience = () => {
       role: "Business Development Intern",
       company: "DIA DAO",
       period: "2022 – Present",
+      // Research and data analysis placeholder
+      image: "dia.jpg",
       points: [
         "Built business relationships and supported marketing in lead qualification",
         "Conducted market research to identify potential users",
@@ -274,7 +280,6 @@ const Experience = () => {
               transition={{ delay: index * 0.1 }}
               className="relative pl-8 md:pl-0"
             >
-              {/* Timeline Line */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-sage/30 md:left-1/2 md:-translate-x-1/2" />
               
               <div className={cn(
@@ -307,8 +312,17 @@ const Experience = () => {
                 {/* Timeline Dot */}
                 <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-sage border-4 border-sand-light md:left-1/2 md:-translate-x-1/2 md:top-8" />
                 
-                {/* Spacer for the other side */}
-                <div className="hidden md:block w-1/2" />
+                {/* Updated Image Side */}
+                <div className="hidden md:flex w-1/2 justify-center">
+                  <div className="relative group overflow-hidden rounded-2xl border-2 border-sage/20">
+                    <img 
+                      src={exp.image} 
+                      alt={exp.company}
+                      className="w-full h-48 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-sage/10 group-hover:bg-transparent transition-colors" />
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -317,6 +331,7 @@ const Experience = () => {
     </section>
   );
 };
+
 
 const SkillsAndEducation = () => {
   const skillGroups = [
@@ -463,14 +478,14 @@ const CTA = () => {
           
           <div className="flex flex-wrap justify-center gap-6">
             <a 
-              href="mailto:essseohen@gmail.com" 
+              href="mailto:esseogboumah@gmail.com" 
               className="flex items-center gap-3 px-8 py-4 bg-earth text-white rounded-full font-bold hover:scale-105 transition-all"
             >
               <Mail className="w-5 h-5" />
               Send an Email
             </a>
             <div className="flex gap-4">
-              <a href="#" className="p-4 glass rounded-full hover:bg-primary hover:text-white transition-all">
+              <a href="https://ng.linkedin.com/in/esse-ogboumah-376004253" className="p-4 glass rounded-full hover:bg-primary hover:text-white transition-all">
                 <Linkedin className="w-6 h-6" />
               </a>
               <a href="https://x.com/Esseohen" className="p-4 glass rounded-full hover:bg-primary hover:text-white transition-all">
