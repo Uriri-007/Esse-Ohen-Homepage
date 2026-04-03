@@ -103,7 +103,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-earth/60 max-w-2xl mx-auto mb-10 leading-relaxed">
             Community Manager & Business Developer fostering diversity and driving initiatives in the Web3 space.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pb-1 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="#contact" 
               className="px-8 py-4 bg-sage text-white rounded-full font-medium hover:bg-sage-dark transition-all shadow-lg hover:shadow-sage/20"
@@ -167,7 +167,7 @@ const About = () => {
                 <img 
                   src="esse.jpg" 
                   alt="Esse Ohen" 
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-cover rounded-xl grayscale"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
@@ -226,7 +226,7 @@ const Experience = () => {
       company: "Rezerve Money",
       period: "June 2025 – Present",
       // Community image
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
+      image: "rzr.jpg",
       points: [
         "Guided new members through onboarding and facilitated open communication",
         "Fostered diversity by engaging underrepresented voices",
@@ -252,7 +252,7 @@ const Experience = () => {
       company: "DIA DAO",
       period: "2022 – Present",
       // Business/Tech image
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+      image: "dia.jpg",
       points: [
         "Built business relationships and supported marketing in lead qualification",
         "Conducted market research to identify potential users",
