@@ -313,7 +313,7 @@ const Experience = () => {
                 <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-sage border-4 border-sand-light md:left-1/2 md:-translate-x-1/2 md:top-8" />
                 
                 {/* Updated Image Side */}
-                <div className="hidden md:flex w-1/2 justify-center">
+                <div className="md:flex w-1/2 justify-center">
                   <div className="relative group overflow-hidden rounded-2xl border-2 border-sage/20">
                     <img 
                       src={exp.image} 
