@@ -224,8 +224,8 @@ const Experience = () => {
     {
       role: "Community Moderator",
       company: "Rezerve Money",
+      url: "https://x.com/rezervemoney",
       period: "June 2025 – Present",
-      // Community image
       image: "rzr.jpg",
       points: [
         "Guided new members through onboarding and facilitated open communication",
@@ -237,9 +237,9 @@ const Experience = () => {
     {
       role: "Community Manager",
       company: "Own Protocol",
+      url: "https://x.com/ownfinanceHQ",
       period: "June 2025 – Present",
-      // Social/Management image
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+      image: "iownco.jpg",
       points: [
         "Managed social media channels for brand visibility and audience interaction",
         "Optimized marketing efforts for community expansion",
@@ -250,8 +250,8 @@ const Experience = () => {
     {
       role: "Business Development Intern",
       company: "DIA DAO",
+      url: "https://x.com/diadata_org",
       period: "2022 – Present",
-      // Business/Tech image
       image: "dia.jpg",
       points: [
         "Built business relationships and supported marketing in lead qualification",
@@ -286,22 +286,31 @@ const Experience = () => {
                 "flex flex-col md:flex-row items-center gap-8",
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
               )}>
-                {/* Content Card with Mobile Image */}
                 <div className="w-full md:w-1/2">
                   <div className="glass p-8 rounded-2xl hover:shadow-xl transition-all border-l-4 border-sage">
-                    {/* Mobile Image: Only shown below 'md' breakpoint */}
+                    {/* Mobile Image */}
                     <div className="block md:hidden mb-6 aspect-video overflow-hidden rounded-xl border-2 border-sage/20">
                       <img 
                         src={exp.image} 
                         alt={exp.company}
-                        className="w-full h-full object-cover grayscale"
+                        className="w-full h-full object-cover"
                       />
                     </div>
 
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h3 className="text-xl font-bold text-earth">{exp.role}</h3>
-                        <p className="text-sage-dark font-medium">{exp.company}</p>
+                        
+                        {/* Styled Link */}
+                        <a 
+                          href={exp.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="relative inline-block text-sage-dark font-semibold group transition-colors duration-300 hover:text-earth"
+                        >
+                          {exp.company}
+                          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-sage-dark transition-all duration-300 group-hover:w-full"></span>
+                        </a>
                       </div>
                       <span className="text-xs font-bold px-3 py-1 bg-sand rounded-full text-earth/60">
                         {exp.period}
@@ -321,7 +330,7 @@ const Experience = () => {
                 {/* Timeline Dot */}
                 <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-sage border-4 border-sand-light md:left-1/2 md:-translate-x-1/2 md:top-8" />
                 
-                {/* Desktop Image Side: Only shown above 'md' breakpoint */}
+                {/* Desktop Image */}
                 <div className="hidden md:flex w-1/2 justify-center">
                   <div className="relative group overflow-hidden rounded-2xl border-2 border-sage/20">
                     <img 
@@ -340,8 +349,6 @@ const Experience = () => {
     </section>
   );
 };
-
-
 
 const SkillsAndEducation = () => {
   const skillGroups = [
