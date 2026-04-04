@@ -139,18 +139,7 @@ const Hero = () => {
 };
 
 const About = () => {
-  const [copied, setCopied] = useState(false);
   const summary = "A dynamic community professional with a proven track record at Rezerve Money, excelling in content moderation and community engagement. Leveraged strong writing skills to enhance user interaction and foster diversity, resulting in increased community involvement. Known for patience and a commitment to ethical practices, driving successful initiatives that resonate with diverse audiences.";
-
-  const handleExplainToChatGPT = () => {
-    navigator.clipboard.writeText(summary);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 3000);
-    
-    // Open ChatGPT with the prompt
-    const prompt = encodeURIComponent(`Here is a professional summary of Esse Ohen: "${summary}". Please provide more insights and help me draft a personalized outreach message for her.`);
-    window.open(`https://chatgpt.com/?q=${prompt}`, '_blank');
-  };
 
   return (
     <section id="about" className="py-24 bg-white/30">
@@ -167,7 +156,7 @@ const About = () => {
                 <img 
                   src="esse.jpg" 
                   alt="Esse Ohen" 
-                  className="w-full h-full object-cover rounded-xl grayscale"
+                  className="w-full h-full object-cover rounded-xl"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
@@ -186,30 +175,6 @@ const About = () => {
               <h2 className="text-3xl font-bold text-earth mb-6">Professional Summary</h2>
               <p className="text-lg text-earth/70 leading-relaxed mb-8">
                 {summary}
-              </p>
-              
-              <button
-                onClick={handleExplainToChatGPT}
-                className="group relative flex items-center gap-3 px-6 py-3 bg-earth text-white rounded-xl font-medium hover:bg-earth/90 transition-all overflow-hidden"
-              >
-                <MessageSquare className="w-5 h-5" />
-                <span>Explain Esse to ChatGPT</span>
-                <AnimatePresence>
-                  {copied && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="absolute inset-0 bg-sage flex items-center justify-center gap-2"
-                    >
-                      <Check className="w-5 h-5" />
-                      <span className="text-sm">Summary Copied!</span>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </button>
-              <p className="mt-3 text-xs text-earth/40 italic">
-                Copies summary & opens ChatGPT for more info.
               </p>
             </motion.div>
           </div>
@@ -293,7 +258,7 @@ const Experience = () => {
                       <img 
                         src={exp.image} 
                         alt={exp.company}
-                        className="w-full h-full object-cover grayscale"
+                        className="w-full h-full object-cover"
                       />
                     </div>
 
@@ -336,7 +301,7 @@ const Experience = () => {
                     <img 
                       src={exp.image} 
                       alt={exp.company}
-                      className="w-full h-48 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
+                      className="w-full h-48 object-cover transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-sage/10 group-hover:bg-transparent transition-colors" />
                   </div>
